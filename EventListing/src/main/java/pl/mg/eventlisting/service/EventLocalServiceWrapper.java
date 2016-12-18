@@ -267,6 +267,17 @@ public class EventLocalServiceWrapper implements EventLocalService,
         return _eventLocalService.invokeMethod(name, parameterTypes, arguments);
     }
 
+    @Override
+    public java.lang.String addEvent(long groupId, java.lang.String name,
+        java.lang.String description, int month, int day, int year, int hour,
+        int minute, long locationId,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return _eventLocalService.addEvent(groupId, name, description, month,
+            day, year, hour, minute, locationId, serviceContext);
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

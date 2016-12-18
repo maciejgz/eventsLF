@@ -1,5 +1,12 @@
 package pl.mg.eventlisting.service.http;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import pl.mg.eventlisting.service.EventServiceUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
  * {@link pl.mg.eventlisting.service.EventServiceUtil} service utility. The
@@ -41,4 +48,23 @@ package pl.mg.eventlisting.service.http;
  * @generated
  */
 public class EventServiceSoap {
+    private static Log _log = LogFactoryUtil.getLog(EventServiceSoap.class);
+
+    public static java.lang.String addEvent(long groupId,
+        java.lang.String name, java.lang.String description, int month,
+        int day, int year, int hour, int minute, long locationId,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws RemoteException {
+        try {
+            java.lang.String returnValue = EventServiceUtil.addEvent(groupId,
+                    name, description, month, day, year, hour, minute,
+                    locationId, serviceContext);
+
+            return returnValue;
+        } catch (Exception e) {
+            _log.error(e, e);
+
+            throw new RemoteException(e.getMessage());
+        }
+    }
 }

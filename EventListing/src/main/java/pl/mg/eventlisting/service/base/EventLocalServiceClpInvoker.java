@@ -45,6 +45,8 @@ public class EventLocalServiceClpInvoker {
     private String[] _methodParameterTypes40;
     private String _methodName41;
     private String[] _methodParameterTypes41;
+    private String _methodName46;
+    private String[] _methodParameterTypes46;
 
     public EventLocalServiceClpInvoker() {
         _methodName0 = "addEvent";
@@ -130,6 +132,14 @@ public class EventLocalServiceClpInvoker {
         _methodName41 = "setBeanIdentifier";
 
         _methodParameterTypes41 = new String[] { "java.lang.String" };
+
+        _methodName46 = "addEvent";
+
+        _methodParameterTypes46 = new String[] {
+                "long", "java.lang.String", "java.lang.String", "int", "int",
+                "int", "int", "int", "long",
+                "com.liferay.portal.service.ServiceContext"
+            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -231,6 +241,20 @@ public class EventLocalServiceClpInvoker {
             EventLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
+        }
+
+        if (_methodName46.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
+            return EventLocalServiceUtil.addEvent(((Long) arguments[0]).longValue(),
+                (java.lang.String) arguments[1],
+                (java.lang.String) arguments[2],
+                ((Integer) arguments[3]).intValue(),
+                ((Integer) arguments[4]).intValue(),
+                ((Integer) arguments[5]).intValue(),
+                ((Integer) arguments[6]).intValue(),
+                ((Integer) arguments[7]).intValue(),
+                ((Long) arguments[8]).longValue(),
+                (com.liferay.portal.service.ServiceContext) arguments[9]);
         }
 
         throw new UnsupportedOperationException();

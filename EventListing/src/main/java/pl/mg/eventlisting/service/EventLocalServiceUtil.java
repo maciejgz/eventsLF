@@ -259,6 +259,17 @@ public class EventLocalServiceUtil {
         return getService().invokeMethod(name, parameterTypes, arguments);
     }
 
+    public static java.lang.String addEvent(long groupId,
+        java.lang.String name, java.lang.String description, int month,
+        int day, int year, int hour, int minute, long locationId,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return getService()
+                   .addEvent(groupId, name, description, month, day, year,
+            hour, minute, locationId, serviceContext);
+    }
+
     public static void clearService() {
         _service = null;
     }

@@ -1,5 +1,9 @@
 package pl.mg.eventlisting.service.impl;
 
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.service.ServiceContext;
+
 import pl.mg.eventlisting.service.base.EventServiceBaseImpl;
 
 /**
@@ -22,4 +26,13 @@ public class EventServiceImpl extends EventServiceBaseImpl {
      *
      * Never reference this interface directly. Always use {@link pl.mg.eventlisting.service.EventServiceUtil} to access the event remote service.
      */
+	
+	public String addEvent(long groupId, String name, String description,
+		       int month, int day, int year, int hour, int minute,
+		       long locationId, ServiceContext serviceContext)
+		       throws PortalException, SystemException {
+
+
+		    return "result";
+		}
 }
