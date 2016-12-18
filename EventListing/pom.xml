@@ -9,6 +9,13 @@
 	<name>EventListening Portlet</name>
 	<version>1.0.0-SNAPSHOT</version>
 
+	<description>
+		Remote service tutorial:
+		https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/defining-an-object-relational-map-with-service-builder
+		
+		
+		To test activiti integration
+	</description>
 
 	<properties>
 		<plugin.type>portlet</plugin.type>
