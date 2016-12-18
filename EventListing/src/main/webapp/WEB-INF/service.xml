@@ -14,6 +14,9 @@
         <column name="createDate" type="Date"></column>
         <column name="modifiedDate" type="Date"></column>
         <column name="locationId" type="long"></column>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
     </entity>
     <entity name="Location" local-service="true">
         <column name="locationId" primary="true" type="long"></column>
@@ -28,6 +31,9 @@
         <column name="userId" type="long"></column>
         <column name="createDate" type="Date"></column>
         <column name="modifiedDate" type="Date"></column>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
     </entity>
 	
 
