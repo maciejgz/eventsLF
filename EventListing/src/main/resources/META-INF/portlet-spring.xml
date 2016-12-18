@@ -7,4 +7,6 @@
 	<bean id="pl.mg.eventlisting.service.LocationLocalService" class="pl.mg.eventlisting.service.impl.LocationLocalServiceImpl" />
 	<bean id="pl.mg.eventlisting.service.LocationService" class="pl.mg.eventlisting.service.impl.LocationServiceImpl" />
 	<bean id="pl.mg.eventlisting.service.persistence.LocationPersistence" class="pl.mg.eventlisting.service.persistence.LocationPersistenceImpl" parent="basePersistence" />
+	<bean id="pl.mg.eventlisting.service.WorkflowLocalService" class="pl.mg.eventlisting.service.impl.WorkflowLocalServiceImpl" />
+	<bean id="pl.mg.eventlisting.service.WorkflowService" class="pl.mg.eventlisting.service.impl.WorkflowServiceImpl" />
 </beans>

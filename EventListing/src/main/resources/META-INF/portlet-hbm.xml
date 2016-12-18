@@ -4,6 +4,7 @@
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="pl.mg.eventlisting.model.Event" />
 	<import class="pl.mg.eventlisting.model.Location" />
+	<import class="pl.mg.eventlisting.model.Workflow" />
 	<class name="pl.mg.eventlisting.model.impl.EventImpl" table="Event">
 		<cache usage="read-write" />
 		<id name="eventId" type="long">

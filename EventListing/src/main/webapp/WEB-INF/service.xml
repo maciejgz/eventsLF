@@ -35,6 +35,7 @@
             <finder-column name="groupId"></finder-column>
         </finder>
     </entity>
+    <entity name="Workflow" local-service="true" remote-service="true"></entity>
 	
 
 </service-builder>

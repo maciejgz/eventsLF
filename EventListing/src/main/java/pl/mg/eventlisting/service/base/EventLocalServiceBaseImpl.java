@@ -54,6 +54,10 @@ public abstract class EventLocalServiceBaseImpl extends BaseLocalServiceImpl
     protected pl.mg.eventlisting.service.LocationService locationService;
     @BeanReference(type = LocationPersistence.class)
     protected LocationPersistence locationPersistence;
+    @BeanReference(type = pl.mg.eventlisting.service.WorkflowLocalService.class)
+    protected pl.mg.eventlisting.service.WorkflowLocalService workflowLocalService;
+    @BeanReference(type = pl.mg.eventlisting.service.WorkflowService.class)
+    protected pl.mg.eventlisting.service.WorkflowService workflowService;
     @BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
     protected com.liferay.counter.service.CounterLocalService counterLocalService;
     @BeanReference(type = com.liferay.portal.service.ResourceLocalService.class)
@@ -394,6 +398,44 @@ public abstract class EventLocalServiceBaseImpl extends BaseLocalServiceImpl
      */
     public void setLocationPersistence(LocationPersistence locationPersistence) {
         this.locationPersistence = locationPersistence;
+    }
+
+    /**
+     * Returns the workflow local service.
+     *
+     * @return the workflow local service
+     */
+    public pl.mg.eventlisting.service.WorkflowLocalService getWorkflowLocalService() {
+        return workflowLocalService;
+    }
+
+    /**
+     * Sets the workflow local service.
+     *
+     * @param workflowLocalService the workflow local service
+     */
+    public void setWorkflowLocalService(
+        pl.mg.eventlisting.service.WorkflowLocalService workflowLocalService) {
+        this.workflowLocalService = workflowLocalService;
+    }
+
+    /**
+     * Returns the workflow remote service.
+     *
+     * @return the workflow remote service
+     */
+    public pl.mg.eventlisting.service.WorkflowService getWorkflowService() {
+        return workflowService;
+    }
+
+    /**
+     * Sets the workflow remote service.
+     *
+     * @param workflowService the workflow remote service
+     */
+    public void setWorkflowService(
+        pl.mg.eventlisting.service.WorkflowService workflowService) {
+        this.workflowService = workflowService;
     }
 
     /**

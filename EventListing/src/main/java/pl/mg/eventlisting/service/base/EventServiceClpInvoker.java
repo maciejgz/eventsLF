@@ -9,25 +9,25 @@ import java.util.Arrays;
  * @generated
  */
 public class EventServiceClpInvoker {
-    private String _methodName24;
-    private String[] _methodParameterTypes24;
-    private String _methodName25;
-    private String[] _methodParameterTypes25;
-    private String _methodName30;
-    private String[] _methodParameterTypes30;
+    private String _methodName28;
+    private String[] _methodParameterTypes28;
+    private String _methodName29;
+    private String[] _methodParameterTypes29;
+    private String _methodName34;
+    private String[] _methodParameterTypes34;
 
     public EventServiceClpInvoker() {
-        _methodName24 = "getBeanIdentifier";
+        _methodName28 = "getBeanIdentifier";
 
-        _methodParameterTypes24 = new String[] {  };
+        _methodParameterTypes28 = new String[] {  };
 
-        _methodName25 = "setBeanIdentifier";
+        _methodName29 = "setBeanIdentifier";
 
-        _methodParameterTypes25 = new String[] { "java.lang.String" };
+        _methodParameterTypes29 = new String[] { "java.lang.String" };
 
-        _methodName30 = "addEvent";
+        _methodName34 = "addEvent";
 
-        _methodParameterTypes30 = new String[] {
+        _methodParameterTypes34 = new String[] {
                 "long", "java.lang.String", "java.lang.String", "int", "int",
                 "int", "int", "int", "long",
                 "com.liferay.portal.service.ServiceContext"
@@ -36,20 +36,20 @@ public class EventServiceClpInvoker {
 
     public Object invokeMethod(String name, String[] parameterTypes,
         Object[] arguments) throws Throwable {
-        if (_methodName24.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes24, parameterTypes)) {
+        if (_methodName28.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes28, parameterTypes)) {
             return EventServiceUtil.getBeanIdentifier();
         }
 
-        if (_methodName25.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes25, parameterTypes)) {
+        if (_methodName29.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes29, parameterTypes)) {
             EventServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
         }
 
-        if (_methodName30.equals(name) &&
-                Arrays.deepEquals(_methodParameterTypes30, parameterTypes)) {
+        if (_methodName34.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes34, parameterTypes)) {
             return EventServiceUtil.addEvent(((Long) arguments[0]).longValue(),
                 (java.lang.String) arguments[1],
                 (java.lang.String) arguments[2],

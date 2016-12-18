@@ -8,6 +8,8 @@ import pl.mg.eventlisting.service.EventLocalServiceUtil;
 import pl.mg.eventlisting.service.EventServiceUtil;
 import pl.mg.eventlisting.service.LocationLocalServiceUtil;
 import pl.mg.eventlisting.service.LocationServiceUtil;
+import pl.mg.eventlisting.service.WorkflowLocalServiceUtil;
+import pl.mg.eventlisting.service.WorkflowServiceUtil;
 
 
 public class ClpMessageListener extends BaseMessageListener {
@@ -28,6 +30,9 @@ public class ClpMessageListener extends BaseMessageListener {
             LocationLocalServiceUtil.clearService();
 
             LocationServiceUtil.clearService();
+            WorkflowLocalServiceUtil.clearService();
+
+            WorkflowServiceUtil.clearService();
         }
     }
 }
