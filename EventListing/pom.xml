@@ -3,11 +3,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example.plugins</groupId>
-	<artifactId>EventListening</artifactId>
+	<groupId>pl.mg.eventlisting</groupId>
+	<artifactId>EventListing</artifactId>
 	<packaging>war</packaging>
-	<name>EventListening Portlet</name>
-	<version>1.0.0-SNAPSHOT</version>
+	<name>EventListing Portlet</name>
+	<version>1.0.0</version>
 
 	<description>
 		Remote service tutorial:
@@ -25,7 +25,7 @@
 		<liferay.app.server.deploy.dir>C:\programy\liferay-portal-6.2-ce-ga4\tomcat-7.0.42\webapps</liferay.app.server.deploy.dir>
 		<liferay.app.server.lib.global.dir>C:\programy\liferay-portal-6.2-ce-ga4\tomcat-7.0.42\lib\ext</liferay.app.server.lib.global.dir>
 		<liferay.app.server.portal.dir>C:\programy\liferay-portal-6.2-ce-ga4\tomcat-7.0.42\webapps\ROOT</liferay.app.server.portal.dir>
-		<!-- <pluginName>${project.artifactId}-${project.version}-portlet</pluginName> -->
+		<pluginName>${project.artifactId}-${project.version}</pluginName>
 	</properties>
 
 	<build>
@@ -49,6 +49,7 @@
 					<appServerPortalDir>${liferay.app.server.portal.dir}</appServerPortalDir>
 					<liferayVersion>${liferay.version}</liferayVersion>
 					<pluginType>portlet</pluginType>
+					<pluginName>${project.artifactId}-${project.version}</pluginName>
 				</configuration>
 			</plugin>
 			<plugin>

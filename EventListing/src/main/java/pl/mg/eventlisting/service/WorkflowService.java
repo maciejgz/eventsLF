@@ -54,4 +54,12 @@ public interface WorkflowService extends BaseService, InvokableService {
 
     @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     public java.lang.String getWorkflowInstance();
+
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    public java.util.List<pl.mg.eventlisting.model.UserTask> getUserTasks(
+        java.lang.String username);
+
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+    public pl.mg.eventlisting.model.UserTask getUserTask(
+        java.lang.String username);
 }

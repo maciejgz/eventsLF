@@ -51,4 +51,30 @@ public class WorkflowServiceSoap {
             throw new RemoteException(e.getMessage());
         }
     }
+
+    public static pl.mg.eventlisting.model.UserTask[] getUserTasks(
+        java.lang.String username) throws RemoteException {
+        try {
+            java.util.List<pl.mg.eventlisting.model.UserTask> returnValue = WorkflowServiceUtil.getUserTasks(username);
+
+            return returnValue.toArray(new pl.mg.eventlisting.model.UserTask[returnValue.size()]);
+        } catch (Exception e) {
+            _log.error(e, e);
+
+            throw new RemoteException(e.getMessage());
+        }
+    }
+
+    public static pl.mg.eventlisting.model.UserTask getUserTask(
+        java.lang.String username) throws RemoteException {
+        try {
+            pl.mg.eventlisting.model.UserTask returnValue = WorkflowServiceUtil.getUserTask(username);
+
+            return returnValue;
+        } catch (Exception e) {
+            _log.error(e, e);
+
+            throw new RemoteException(e.getMessage());
+        }
+    }
 }

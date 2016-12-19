@@ -49,6 +49,18 @@ public class WorkflowServiceWrapper implements WorkflowService,
         return _workflowService.getWorkflowInstance();
     }
 
+    @Override
+    public java.util.List<pl.mg.eventlisting.model.UserTask> getUserTasks(
+        java.lang.String username) {
+        return _workflowService.getUserTasks(username);
+    }
+
+    @Override
+    public pl.mg.eventlisting.model.UserTask getUserTask(
+        java.lang.String username) {
+        return _workflowService.getUserTask(username);
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

@@ -55,6 +55,16 @@ public class WorkflowServiceUtil {
         return getService().getWorkflowInstance();
     }
 
+    public static java.util.List<pl.mg.eventlisting.model.UserTask> getUserTasks(
+        java.lang.String username) {
+        return getService().getUserTasks(username);
+    }
+
+    public static pl.mg.eventlisting.model.UserTask getUserTask(
+        java.lang.String username) {
+        return getService().getUserTask(username);
+    }
+
     public static void clearService() {
         _service = null;
     }
